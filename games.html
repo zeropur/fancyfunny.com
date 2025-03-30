@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Details</title>
+    <meta name="description" content="Game details will be displayed here.">
+    <link rel="canonical" href="https://fancyfunny.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #ff4d00;
+            --primary-hover: #ff6a33;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --border-color: #333333;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+        }
+        
+        h1, h2, h3, .game-title {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .game-container {
+            aspect-ratio: 16/9;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .primary-button {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .primary-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(255, 77, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="bg-black bg-opacity-80 border-b border-gray-800 backdrop-filter backdrop-blur-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-white game-title tracking-wider">
+                    <span class="text-[var(--primary)]">Fancy</span>Funny
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <article class="bg-[var(--card-bg)] rounded-xl shadow-xl border border-[var(--border-color)] p-6 md:p-8 overflow-hidden relative">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-wide game-title main-title">Game Title</h1>
+            <p class="text-xl text-[var(--text-primary)] mb-6 game-description">Game description will be displayed here.</p>
+            
+            <div class="game-container mb-8">
+                <div class="w-full h-full bg-black bg-opacity-60 rounded-lg shadow-2xl border border-[var(--border-color)] overflow-hidden" style="min-height: 600px;">
+                    <iframe 
+                        src="https://html-classic.itch.zone/html/13139325/index.html" 
+                        class="w-full h-full"
+                        style="min-height: 600px;" 
+                        frameborder="0"
+                        allowfullscreen="true"
+                        webkitallowfullscreen="true"
+                        mozallowfullscreen="true"
+                        allow="autoplay; fullscreen; encrypted-media"
+                        id="game-iframe">
+                    </iframe>
+                </div>
+                <div class="text-center mt-3">
+                    <button onclick="openFullscreen()" class="primary-button px-4 py-2 text-sm glow-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
+                        </svg>
+                        Fullscreen
+                    </button>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-white">About the Game</h2>
+                <p class="text-[var(--text-secondary)] game-about">About game content will be displayed here.</p>
+            </div>
+
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-white">Game Features</h2>
+                <ul class="text-[var(--text-secondary)] game-features">
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-white">How to Play</h2>
+                <p class="text-[var(--text-secondary)] game-howplay">Instructions on how to play the game will be displayed here.</p>
+            </div>
+
+            <script>
+                function openFullscreen() {
+                    var iframe = document.getElementById("game-iframe");
+                    if (iframe.requestFullscreen) {
+                        iframe.requestFullscreen();
+                    } else if (iframe.webkitRequestFullscreen) { /* Safari */
+                        iframe.webkitRequestFullscreen();
+                    } else if (iframe.msRequestFullscreen) { /* IE11 */
+                        iframe.msRequestFullscreen();
+                    }
+                }
+
+                // 获取 URL 参数
+                const urlParams = new URLSearchParams(window.location.search);
+                const game = urlParams.get('game');
+
+                // 根据游戏名称显示相应的内容
+                const gameContent = {
+                    TRACE: {
+                        title: "TRACE: Definitive Edition DEMO",
+                        description: "Experience the ultimate block destruction in this thrilling game!",
+                        GameUrl: "https://html-classic.itch.zone/html/13213080/index.html",
+                        AboutGame: "TRACE is a cooperative puzzle game designed to challenge the skills of players. The game includes several new mechanics, such as dynamic puzzles and new story elements.",
+                        GameFeatures: ["New puzzles", "High-definition graphics", "New story elements"],
+                        HowPlay: "You can play this game directly on the platform."
+                    },
+                    QuietWest: {
+                        title: "Quiet West: Butcher Noose",
+                        description: "Dive into the wild west adventure and face thrilling challenges!",
+                        GameUrl: "https://html-classic.itch.zone/html/13139325/index.html",
+                        AboutGame: "Quiet West is an immersive wild west adventure game that features a detailed world and engaging story.",
+                        GameFeatures: ["Open world exploration", "Dynamic quests", "Rich storytelling"],
+                        HowPlay: "Explore the world and complete quests to progress."
+                    },
+                    DoorsChallenge: {
+                        title: "100 Doors Challenge",
+                        description: "Can you solve the puzzles and escape through all 100 doors?",
+                        GameUrl: "https://www.coolmathgames.com/0-100-doors-challenge/play",
+                        AboutGame: "A game related to the '100 Doors Challenge' puzzle-solving.",
+                        GameFeatures: ["Challenging puzzles", "Multiple levels", "Engaging gameplay"],
+                        HowPlay: "Use your wits to solve puzzles and escape through the doors."
+                    },
+                    EGG: {
+                        title: "EGG HARVESTER",
+                        description: "Harvest eggs and build your farm in this fun clicker game!",
+                        GameUrl: "https://html-classic.itch.zone/html/12283389/index.html",
+                        AboutGame: "EGG HARVESTER is a first-person factory-building simulator where players can manage their own farm.",
+                        GameFeatures: ["Fun clicker mechanics", "Farm building", "Resource management"],
+                        HowPlay: "Click to harvest eggs and expand your farm."
+                    },
+                    Run3: {
+                        title: "Run 3",
+                        description: "There's a whole new galaxy waiting to be explored!",
+                        GameUrl: "https://www.coolmathgames.com/0-run-3/play",
+                        AboutGame: "Run 3 is a game in which players can explore endless tunnels in space.",
+                        GameFeatures: ["Endless running", "Multiple characters", "Challenging levels"],
+                        HowPlay: "Use the arrow keys to control your character and navigate through the tunnels."
+                    },
+                    PaintRace: {
+                        title: "Paint Race",
+                        description: "Slide and paint, just don't faint!",
+                        GameUrl: "https://www.coolmathgames.com/0-paint-race/play",
+                        AboutGame: "Paint Race is a fun and colorful racing game where players paint the track as they race.",
+                        GameFeatures: ["Colorful graphics", "Fun gameplay", "Multiplayer mode"],
+                        HowPlay: "Race against others while painting the track."
+                    },
+                    FridayNightFunkin: {
+                        title: "FRIDAY NIGHT FUNKIN'",
+                        description: "The coolest rhythm game!",
+                        GameUrl: "https://html-classic.itch.zone/html/2876359-1104083/index.html?v=1732313800",
+                        AboutGame: "Friday Night Funkin' is a rhythm-based game where players must hit the right notes to win.",
+                        GameFeatures: ["Catchy music", "Challenging opponents", "Unique characters"],
+                        HowPlay: "Press the correct keys in time with the music to win."
+                    },
+                    WeBecomeWhatWeBehold: {
+                        title: "WE BECOME WHAT WE BEHOLD",
+                        description: "A game about news cycles, vicious cycles, infinite cycles!",
+                        GameUrl: "https://html-classic.itch.zone/html/300364/index.html?v=1542781840",
+                        AboutGame: "This game explores various cycles and their impact on society.",
+                        GameFeatures: ["Unique art style", "Thought-provoking gameplay", "Multiple endings"],
+                        HowPlay: "Interact with the environment to progress through the story."
+                    },
+                };
+
+                if (game && gameContent[game]) {
+                    document.querySelector('.main-title').textContent = gameContent[game].title; // 更新游戏标题
+                    document.querySelector('.game-description').textContent = gameContent[game].description; // 更新游戏描述
+                    document.querySelector('#game-iframe').src = gameContent[game].GameUrl; // 更新 iframe 地址
+                    document.querySelector('.game-about').textContent = gameContent[game].AboutGame; // 更新关于游戏的描述
+                    document.querySelector('.game-features').innerHTML = gameContent[game].GameFeatures.map(feature => `<li>${feature}</li>`).join(''); // 更新游戏特性
+                    document.querySelector('.game-howplay').textContent = gameContent[game].HowPlay; // 更新游戏玩法
+                }
+            </script>
+        </article>
+    </main>
+
+    <footer class="bg-black bg-opacity-80 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <p class="text-center text-gray-500 text-sm">© 2024 <span class="text-[var(--primary)]">Fancy</span>Funny. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

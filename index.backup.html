@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet West: Butcher Noose - Wild West Adventure Game | Play Online</title>
+    <meta name="description" content="Play Quiet West: Butcher Noose, an immersive wild west adventure game. Experience the thrill of the frontier in this action-packed online game.">
+    <link rel="canonical" href="https://fancyfunny.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2H4W8G8Z17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-2H4W8G8Z17');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #ff4d00;
+            --primary-hover: #ff6a33;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --border-color: #333333;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23333333' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        h1, h2, h3, .game-title {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .game-container {
+            aspect-ratio: 16/9;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .primary-button {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .primary-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(255, 77, 0, 0.4);
+        }
+        
+        .glow-effect {
+            position: relative;
+        }
+        
+        .glow-effect:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            box-shadow: 0 0 20px 5px rgba(255, 77, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .glow-effect:hover:after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="bg-black bg-opacity-80 border-b border-gray-800 backdrop-filter backdrop-blur-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-white game-title tracking-wider">
+                    <span class="text-[var(--primary)]">Fancy</span>Funny
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <article class="bg-[var(--card-bg)] rounded-xl shadow-xl border border-[var(--border-color)] p-6 md:p-8 overflow-hidden relative">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--primary)] to-purple-600"></div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-wide glow-effect">Quiet West: <span class="text-[var(--primary)]">Butcher Noose</span></h1>
+            
+            <div class="prose max-w-none mb-8 text-[var(--text-secondary)]">
+                <p class="text-xl text-[var(--text-primary)] mb-6">Embark on a thrilling journey through the untamed frontier in this action-packed wild west adventure.</p>
+                
+                <div class="game-container mb-8">
+                    <div class="w-full h-full bg-black bg-opacity-60 rounded-lg shadow-2xl border border-[var(--border-color)] overflow-hidden" style="min-height: 600px;">
+                        <iframe 
+                            src="https://html-classic.itch.zone/html/13139325/index.html" 
+                            class="w-full h-full"
+                            style="min-height: 600px;" 
+                            frameborder="0"
+                            allowfullscreen="true"
+                            webkitallowfullscreen="true"
+                            mozallowfullscreen="true"
+                            allow="autoplay; fullscreen; encrypted-media"
+                            id="game-iframe">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button onclick="openFullscreen()" class="primary-button px-4 py-2 text-sm glow-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
+                            </svg>
+                            Fullscreen
+                        </button>
+                    </div>
+                </div>
+
+                <script>
+                    function openFullscreen() {
+                        var iframe = document.getElementById("game-iframe");
+                        if (iframe.requestFullscreen) {
+                            iframe.requestFullscreen();
+                        } else if (iframe.webkitRequestFullscreen) { /* Safari */
+                            iframe.webkitRequestFullscreen();
+                        } else if (iframe.msRequestFullscreen) { /* IE11 */
+                            iframe.msRequestFullscreen();
+                        }
+                    }
+                </script>
+
+                <h2 class="text-2xl font-semibold text-white mt-12 mb-4 tracking-wide border-l-4 border-[var(--primary)] pl-4">About the Game</h2>
+                <p class="text-[var(--text-secondary)] mb-6">Quiet West: Butcher Noose is an immersive wild west adventure that puts you in the boots of a frontier hero. Set in a beautifully crafted open world, the game combines intense action with rich storytelling to create an unforgettable gaming experience.</p>
+
+                <h2 class="text-2xl font-semibold text-white mt-12 mb-4 tracking-wide border-l-4 border-[var(--primary)] pl-4">Game Features</h2>
+                <ul class="space-y-2 text-[var(--text-secondary)]">
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--primary)] mt-1 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        Open world exploration in a detailed wild west setting
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--primary)] mt-1 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        Engaging storyline with multiple quests
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--primary)] mt-1 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        Dynamic combat system
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--primary)] mt-1 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        Stunning visuals and atmospheric soundtrack
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--primary)] mt-1 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        Regular updates and new content
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold text-white mt-12 mb-4 tracking-wide border-l-4 border-[var(--primary)] pl-4">How to Play</h2>
+                <p class="text-[var(--text-secondary)] mb-4">Simply click the play button above to start your adventure. The game features intuitive controls and a user-friendly interface, making it easy to jump right into the action. Whether you're a seasoned gamer or new to the wild west genre, Quiet West: Butcher Noose offers an accessible yet challenging experience.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-black bg-opacity-80 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <p class="text-center text-gray-500 text-sm">© 2024 <span class="text-[var(--primary)]">Fancy</span>Funny. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
